@@ -115,7 +115,7 @@ def main(params):
     # TODO: Add checks to validate of the branch and tag already exists
     tag = rb.replace(release_version_prefix,"")
     rt = ur.create_git_tag(tag, tag_message.format(rb), rc['commit'].sha, 'commit', tagger=InputGitAuthor(name=params['tag_author'],email=params['tag_author_email'],date=datetime.datetime.utcnow().isoformat("T","seconds")+'-00:00'))
-    gt = ur.create_git_ref(ref='refs/tags/' + tag, sha=rc['commit'].sha)
+    gt = ur.create_git_ref(ref='refs/tags/' + tag, sha=rt.sha)
 
     # TODO validate that tag was created successfully before blowing the trumpet
     return bot_status(issue, 'release_successful')
