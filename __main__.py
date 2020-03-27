@@ -59,7 +59,8 @@ def main(params):
     # in params['__ow_headers']['X-Hub-Signature']
     
     # We get a number of events when an issue is opened. We will just act on the label event
-    if not (params['issue']['state'] == 'open' and 
+    if not ('issue' in params and
+            params['issue']['state'] == 'open' and 
             params['action'] == 'labeled' and
             params['label']['name'] == create_needed_label ):
         return bot_status(None, 'no_action_needed')
