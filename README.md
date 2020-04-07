@@ -19,7 +19,7 @@ Alternatively, it could be built with custom docker container image
 
 ## Deploying the application
 1. Setup your virtualenv and pip install dependencies
-2. zip -r releasecutter.zip __main__.py virtualenv
+2. zip -r releasecutter.zip \_\_main\_\_.py virtualenv
 3. ibmcloud fn action create releasecutter creleasecutter.zip --kind python:3.7  --web true
 
 
