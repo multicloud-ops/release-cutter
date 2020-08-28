@@ -6,7 +6,7 @@ Based on cloud founctions
 
 ## How to use
 
-Add bot URL as webhook to repo you want to be served by the release cutter bot. You get the URL from someone who knows it (believe it or not). It can be set up using the make target, `github/webhook-setup` from the build harness extensions. You will also need to give the bot github account write permissions on your repository so that it can create the new release branch. The bot account is cp4mcm-bot. 
+Add bot URL as webhook to repo you want to be served by the release cutter bot. You get the URL from someone who knows it (believe it or not). It can be set up using the make target, `github/webhook-setup` from the build harness extensions. You will also need to give the bot github account write permissions on your repository so that it can create the new release branch. The bot account is cp4mcm-bot. You will need an OWNERS file in the top level of your repository as well. 
 
 ## How the bot was built
 The bot was built using IBM Cloud Functions with additional 
